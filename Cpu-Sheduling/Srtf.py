@@ -14,4 +14,4 @@ while processus:
 
     processus.remove(plus_court)
 
-print("Temps total =", temps
+print("Temps total =", temps)

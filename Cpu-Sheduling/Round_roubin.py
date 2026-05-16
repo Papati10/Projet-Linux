@@ -1,31 +1,18 @@
 processus = [5, 3, 7]
-
 quantum = 2
-
 temps = 0
 
-while processus:
-
+while any(p > 0 for p in processus):
     for i in range(len(processus)):
-
         if processus[i] > 0:
-
             if processus[i] > quantum:
-
-                print("Processus", i + 1, "s'exécute pendant", quantum)
-
+                print(f"Processus {i+1} s'exécute pendant {quantum}")
                 processus[i] -= quantum
-
                 temps += quantum
-
             else:
-
-                print("Processus", i + 1, "terminé")
-
+                print(f"Processus {i+1} s'exécute pendant {processus[i]}")
                 temps += processus[i]
-
                 processus[i] = 0
+                print(f"Processus {i+1} terminé")
 
-    processus = [p for p in processus if p > 0]
-
-print("Temps total =", temps)
+print(f"\nTemps total : {temps}")
